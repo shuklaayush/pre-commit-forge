@@ -2,8 +2,8 @@
 
 SNAPSHOT_FILE=".gas-snapshot"
 
-echo "Running forge snapshot..."
-forge snapshot
+forge snapshot "$@"
+echo "$@"
 
 ( git ls-files --others --exclude-standard ; git diff --name-only ) | grep -qw "$SNAPSHOT_FILE"
 
