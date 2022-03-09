@@ -2,7 +2,7 @@
 
 ## Usage
 
-Add the following entry to .pre-commit-config.yaml:
+Add the following entry to `.pre-commit-config.yaml`:
 
 ```yaml
 - repo: git://github.com/shuklaayush/pre-commit-forge
