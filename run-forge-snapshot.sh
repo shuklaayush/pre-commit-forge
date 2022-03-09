@@ -4,7 +4,7 @@ SNAPSHOT_FILE=".gas-snapshot"
 
 if [[ $? -ne 1 ]]; then
     echo "Running forge snapshot..."
-    forge snapshot &> /dev/null
+    forge snapshot
 
     ( git ls-files --others --exclude-standard ; git diff --name-only ) | grep -qw "$SNAPSHOT_FILE"
 
