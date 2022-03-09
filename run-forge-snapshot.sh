@@ -1,9 +1,17 @@
 #!/usr/bin/env bash
 
 SNAPSHOT_FILE=".gas-snapshot"
+ARGS="$@"
 
-forge snapshot "$@"
-echo "$@"
+while (( "$#" )); do
+  if [[ "$1" == "--snap" && -n "$2" ]]; then
+    SNAPSHOT_FILE=$2
+    break
+  fi
+  shift
+done
+
+forge snapshot $ARGS
 
 ( git ls-files --others --exclude-standard ; git diff --name-only ) | grep -qw "$SNAPSHOT_FILE"
 
