@@ -1,7 +1,7 @@
--   id: forge-snapshot
-    name: 'forge snapshot'
-    entry: run-forge-snapshot.sh
-    files: '\.sol$'
-    pass_filenames: false
-    language: 'script'
-    description: "Runs `forge snapshot`"
+- id: forge-snapshot
+  name: "forge snapshot"
+  entry: run-forge-snapshot.sh
+  files: '\.sol$'
+  pass_filenames: false
+  language: "script"
+  description: "Runs `forge snapshot`"

@@ -8,5 +8,5 @@ Add the following entry to .pre-commit-config.yaml:
 - repo: git://github.com/shuklaayush/pre-commit-forge
   sha: HEAD
   hooks:
-  - id: forge-snapshot
+    - id: forge-snapshot
 ```
