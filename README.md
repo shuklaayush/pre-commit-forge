@@ -9,4 +9,5 @@ Add the following entry to `.pre-commit-config.yaml`:
   sha: HEAD
   hooks:
     - id: forge-snapshot
+      # args: ["--asc", "--allow-failure"]
 ```

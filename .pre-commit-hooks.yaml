@@ -4,5 +4,4 @@
   files: '\.sol$'
   pass_filenames: false
   language: "script"
-  require_serial: true
   description: "Runs `forge snapshot`"
