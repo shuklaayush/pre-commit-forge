@@ -1,12 +1,6 @@
-- id: forge-test
-  name: run forge tests
+- id: check-forge-snapshot
+  name: check forge snapshot
   language: system
-  entry: forge test
+  entry: forge snapshot --check
   files: ".sol$"
   pass_filenames: false
-- id: forge-snapshot
-  name: take forge snapshot
-  language: script
-  entry: run-forge-snapshot.sh
-  always_run: true
-  stages: [post-commit]
