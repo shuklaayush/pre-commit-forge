@@ -1,7 +1,12 @@
-- id: forge-snapshot
-  name: "forge snapshot"
-  entry: run-forge-snapshot.sh
-  files: '\.sol$'
+- id: forge-test
+  name: run forge tests
+  language: system
+  entry: forge test
+  files: ".sol$"
   pass_filenames: false
-  language: "script"
-  description: "Runs `forge snapshot`"
+- id: forge-snapshot
+  name: take forge snapshot
+  language: script
+  entry: run-forge-snapshot.sh
+  always_run: true
+  stages: [post-commit]

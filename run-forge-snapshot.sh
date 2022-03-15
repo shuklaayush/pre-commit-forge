@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-GIT_STASH_MSG="run-forge-snapshot-stash"
-
 SNAPSHOT_FILE=".gas-snapshot"
 ARGS="$@"
 
@@ -20,3 +18,4 @@ if [[ $? -ne 0 ]]; then
 fi
 
 git add "$SNAPSHOT_FILE"
+git commit --amend --no-edit --no-verify
